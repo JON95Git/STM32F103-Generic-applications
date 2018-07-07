@@ -53,9 +53,9 @@ void DMA1_Channel5_IRQHandler()
         GPIOC -> ODR ^=  ( 1 << 13 );
 
         LCD_I2C_Clear();
-        LCD_I2C_PrintC("Funcionou essa");
+        LCD_I2C_PrintC("Funcionou ");
         LCD_I2C_Goto (2,1);
-        LCD_I2C_PrintC ("porra de DMA");
+        LCD_I2C_PrintC ("o DMA");
 
         while(SPI_I2S_GetFlagStatus(SPI2, SPI_I2S_FLAG_BSY) == SET);
 
